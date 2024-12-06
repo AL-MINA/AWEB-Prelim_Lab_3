@@ -1,0 +1,56 @@
+<div class="container-fluid px-0">  
+    <header class="bg-black text-white relative">  
+        <div class="shape absolute top-0 left-0 w-full h-full bg-gradient-to-b from-red-600 to-red-800" style="clip-path: ellipse(500px 500px at 10% 5%);"></div> 
+        
+        <!-- Navbar -->  
+        <nav class="fixed top-0 left-0 w-full bg-transparent z-20"> 
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <a class="text-xl font-semibold text-[#83ff00] hover:text-white" href="#">SNEAKER SHOES</a> 
+                
+                <!-- Hamburger button for mobile -->
+                <button class="lg:hidden text-white focus:outline-none" id="navbar-toggler">
+                    <span class="navbar-toggler-icon">&#9776;</span>
+                </button>
+
+                <!-- Navbar Links (hidden on mobile) -->
+                <div class="hidden lg:flex space-x-8">
+                    <a class="text-white hover:border-b-2 border-white" href="#">HOME</a>
+                    <a class="text-white hover:border-b-2 border-white" href="#">ABOUT</a>
+                    <a class="text-white hover:border-b-2 border-white" href="#">CONTACT</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Navbar (hidden by default) -->
+        <div class="lg:hidden fixed top-0 left-0 w-full bg-black bg-opacity-75 p-6 hidden" id="mobile-nav">
+            <a class="text-white block py-2" href="#">HOME</a>
+            <a class="text-white block py-2" href="#">ABOUT</a>
+            <a class="text-white block py-2" href="#">CONTACT</a>
+        </div>
+        
+        <!-- Content Section -->
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-wrap">  
+                <div class="w-full md:w-1/2 left-side relative h-screen">  
+                    <img src="https://static.nike.com/a/images/t_default/9e979778-83a8-4ddb-b39a-d678a69efb0b/W+NIKE+P-6000.png" class="absolute top-1/2 left-5 transform -translate-y-1/2 max-w-[300px] w-full h-auto z-10" alt="Sneaker Shoes">  
+                </div>                    
+                
+                <div class="w-full md:w-1/2 right-side pt-36 text-center md:text-left">  
+                    <h1 class="text-4xl font-semibold text-white-800 mb-4 font-allerta-stencil">SNEAKER SHOES</h1>  
+                    <p class="text-xl text-white-600 mb-6 font-bold">EXPLORE EVERYTHING</p>  
+                    <div class="text-center md:text-left">  
+                        <button class="btn order-button bg-transparent border-2 border-[#83ff00] text-[#83ff00] rounded-full px-6 py-2 transition-all duration-700 hover:border-[#ce0000] hover:text-[#ce0000]">ABOUT US</button>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </header>  
+</div>
+
+<script>
+    // Toggle mobile navigation
+    document.getElementById('navbar-toggler').addEventListener('click', function() {
+        const mobileNav = document.getElementById('mobile-nav');
+        mobileNav.classList.toggle('hidden');
+    });
+</script>
